@@ -22,7 +22,7 @@
             $timeout(function () {
               if ($attrs.ngSignaturePadBefore) {
                 $scope.$parent.$apply(function (self) {
-                  self[$attrs.ngSignaturePadBefore]($element);
+                  self[$attrs.ngSignaturePadBefore]($element, $attrs);
                 });
               }
 
@@ -74,7 +74,7 @@
 
               if ($attrs.ngSignaturePadAfter) {
                 $scope.$parent.$apply(function (self) {
-                  self[$attrs.ngSignaturePadAfter]($element);
+                  self[$attrs.ngSignaturePadAfter]($element, $attrs, $scope.ngSignaturePad);
                 });
               }
             });
