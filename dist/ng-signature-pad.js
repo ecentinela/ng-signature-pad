@@ -4,7 +4,7 @@
  * @version 0.1.0
  */
 
-/* global angular, SignaturePad */
+/* global angular */
 
 (function () {
   'use strict';
@@ -12,8 +12,9 @@
   angular.module('ngSignaturePad', []).directive(
     'ngSignaturePad',
     [
+      '$window',
       '$timeout',
-      function ($timeout) {
+      function ($window, $timeout) {
         return {
           scope: {
             ngSignaturePad: '='
@@ -54,7 +55,7 @@
                 $attrs.$set('ngSignaturePadOnEnd', null);
               }
 
-              $scope.ngSignaturePad = new SignaturePad($element[0], {
+              $scope.ngSignaturePad = new $window.SignaturePad($element[0], {
                 dotSize: $attrs.ngSignaturePadDotSize,
                 minWidth: $attrs.ngSignaturePadMinWidth,
                 backgroundColor: $attrs.ngSignaturePadBackgroundColor,
