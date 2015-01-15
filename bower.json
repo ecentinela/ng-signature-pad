@@ -6,7 +6,7 @@
     "Javier Martínez Fernández <ecentinela@gmail.com>"
   ],
   "description": "SignaturePad directive for Angular",
-  "main": "dist/ng-ladda.js",
+  "main": "dist/ng-signature-pad.js",
   "keywords": [
     "signature-pad",
     "angular",
